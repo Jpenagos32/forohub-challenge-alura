@@ -1,5 +1,6 @@
 package alura.challenge.forohub.model;
 
+import alura.challenge.forohub.records.DatosActualizarTopico;
 import alura.challenge.forohub.records.DatosTopico;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -35,4 +36,12 @@ public class TopicosModel {
     this.curso = datosTopico.curso();
   }
 
+  public void actualizarTopico(DatosActualizarTopico datosActualizarTopico) {
+    this.titulo = datosActualizarTopico.titulo();
+    this.mensaje = datosActualizarTopico.mensaje();
+    this.fecha = datosActualizarTopico.fecha();
+    this.status = datosActualizarTopico.status();
+    this.autor = datosActualizarTopico.autor();
+    this.curso = datosActualizarTopico.curso();
+  }
 }
